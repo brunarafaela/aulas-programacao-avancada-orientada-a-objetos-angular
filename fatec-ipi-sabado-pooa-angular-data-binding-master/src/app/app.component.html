@@ -1,0 +1,38 @@
+<!-- <div class="container">
+<p>Oi, meu nome é {{nome}} e tenho {{idade}} anos.</p>
+<p>Lançando um dado: {{lancarDado()}}</p>
+</div> -->
+
+<div class="container">
+<p>Lançando um dado: {{lancarDado()}}</p>
+  <p>Oi, meu nome é {{name}} e tenho {{idade}} anos.</p>
+  2 + 2 = {{2 + 2}}
+
+  <form>
+    <div class="form-group">
+      <label for="nomeInput">Nome</label>
+      <!-- <input type="nome" class="form-control" id="nomeInput"
+        placeholder="Digite um nome"
+        (input)="alterarNome($event)"> -->
+
+        <input type="nome" class="form-control" id="nomeInput"
+        placeholder="Digite um nome"
+        #nomeInput>
+      </div>
+        <button type="button" class="btn btn-primary btn-block"
+        (click)="adicionar(nomeInput)">Adicionar</button>
+        <div class="alert alert-primary mt-3 p-3" [hidden]="!exibirCaixa">
+          {{nome}}
+        </div>
+  </form>
+<hr>
+
+  <label for="produtoInput">Produto</label>
+  <input type="text" class="form-control" id="produtoInput"
+   [(ngModel)]="produto" #produtoInput>
+   <hr>
+    <button type="button" class="btn btn-primary btn-block"
+    (click)="alterarProduto(produtoInput)">
+    Alterar produto </button>
+
+</div>

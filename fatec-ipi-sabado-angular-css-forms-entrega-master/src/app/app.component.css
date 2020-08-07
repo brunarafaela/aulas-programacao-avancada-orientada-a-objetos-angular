@@ -1,0 +1,22 @@
+#header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-vermelho {
+    background: red;
+}
+
+.bg-preto {
+    background: #191919;
+}
+
+#footer {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}

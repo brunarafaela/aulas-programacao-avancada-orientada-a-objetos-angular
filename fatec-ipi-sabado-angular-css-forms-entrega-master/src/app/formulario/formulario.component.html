@@ -1,0 +1,40 @@
+<div class="container">
+  <form #pessoaForm="ngForm" (ngSubmit)="salvar(pessoaForm)" [ngStyle]="{ 'margin-top': '20px', 'margin-bottom': '20px'}">
+    <div class="row">
+      <div class="form-group col-12">
+        <label for="nomeInput">Nome</label>
+        <input type="text" placeholder="Nome" class="form-control p-4" name="nome" [(ngModel)]="pessoa.nome">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="foneInput">Idade</label>
+        <input type="text" placeholder="Idade" class="form-control p-4" name="idade" [(ngModel)]="pessoa.idade">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="profissaoInput">Cusos</label>
+        <select  name="cursoInput" id="cursoInput" class="form-control" name="curso" [(ngModel)]="pessoa.curso">
+          <option value="">Selecione</option>
+          <option *ngFor="let c of cursos">{{c}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary btn-block" [ngStyle]="obterEstilosParaOBotao()">Enviar</button>
+      </div>
+    </div>
+  </form>
+  <div class="card p-0 m-2">
+    <div class="card-header">
+      Aluno
+    </div>
+    <div class="card-body">
+      <p class="card-text">
+      <p>Nome: {{pessoa.nome}}</p>
+      <p>Idade: {{pessoa.idade}}</p>
+      <p>Curso: {{pessoa.curso}}</p>
+    </div>
+  </div>
+
+</div>
